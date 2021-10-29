@@ -1,4 +1,6 @@
-const Card = (article) => {
+import axios from 'axios';
+
+const Card = ({headline, authorPhoto, authorName}) => {
   // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
@@ -16,28 +18,29 @@ const Card = (article) => {
   //     <span>By { authorName }</span>
   //   </div>
   // </div>
-  //
   //instantiating the elements
   const card = document.createElement('div');
-  const headline = document.createElement('div)');
-  const author = document.createElement('div');
+  const cardHeadline = document.createElement('div)');
+  const jsAuthor = document.createElement('div');
   const imgContainer = document.createElement('div');
-  const authorPhoto = document.createElement('img');
-  const authorName = document.createElement('span');
-
+  const jsAuthorPhoto = document.createElement('img');
+  const jsAuthorName = document.createElement('span');
   // setting the class names
   card.classList.add('card');
-  headline.classList.add('headline');
-  author.classList.add('author');
+  cardHeadline.classList.add('headline');
+  jsAuthor.classList.add('author');
   imgContainer.classList.add('img-container');
-  
   //setting the attributes and text
-  headline.textContent = `${headline}`;
-  authorPhoto.src = `${authorPhoto}`;
-  headline.textContent = `${authorName}`;
+  cardHeadline.textContent = `${headline}`;
+  jsAuthorPhoto.src = `${authorPhoto}`;
+  jsAuthorName.textContent = `${authorName}`;
+  //setting the hierarchy
+  card.appendChild(cardHeadline);
+  card.appendChild(jsAuthor);
+  jsAuthor.appendChild(imgContainer);
+  imgContainer.appendChild(jsAuthorPhoto);
 
 }
-
 const cardAppender = (selector) => {
   // TASK 6
   // ---------------------
@@ -47,6 +50,16 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
+  axior.get(`http://localhost:5000/api/articles`)
+  .then(res =>
+    console.log(res);
+    for(let i=0, i<res.data.length; i++){
+      const 
+    }
+    .catch(error => {
+      console.error(error);
+    })
+    )
 }
 
 export { Card, cardAppender }
