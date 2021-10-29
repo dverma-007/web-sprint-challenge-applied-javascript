@@ -59,8 +59,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. What is the DOM?
-2. What is an event?
-3. What is an event listener?
-4. Why would we convert a NodeList into an Array?
-5. What is a component?
+1. What is the DOM?  The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
+2. What is an event?  Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. 
+3. What is an event listener?  An event listener is a procedure in JavaScript that waits for an event to occur. The simple example of an event is a user clicking the mouse or pressing a key on the keyboard.
+4. Why would we convert a NodeList into an Array? A NodeList is a data structure that is  referred to as “Array-like”, because they appear as an array, but can not be used with array methods like map and forEach.  If you want to use these, you have to convert them into an Array.
+5. What is a component?  Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. 
